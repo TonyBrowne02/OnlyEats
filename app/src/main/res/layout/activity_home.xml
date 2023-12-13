@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    Acts as a home page for the user to choose what part of
+        the app they want to interact with -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- activity_home.xml -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Button to browse posts -->
+        <Button
+            android:id="@+id/btnBrowsePosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browse Posts"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button to create a new post -->
+        <Button
+            android:id="@+id/btnCreatePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Post"
+            android:layout_below="@id/btnBrowsePosts"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button to view poster profile -->
+        <Button
+            android:id="@+id/btnPosterProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poster Profile"
+            android:layout_below="@id/btnCreatePost"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

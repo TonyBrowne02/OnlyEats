@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    This xml is used to add a post from post_full_view to
+        a pre-existing collection for that user or to add a new
+        collection. Contains a list of collection_layout which
+        are the pre-existing collections -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Existing Collections Section -->
+    <TextView
+        android:id="@+id/textExistingCollectionsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Existing Collections"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- RecyclerView for Existing Collections -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerExistingCollections"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        tools:listitem="@layout/collection_layout" />
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/dividerHorizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        />
+
+    <!-- New Collection Section -->
+    <TextView
+        android:id="@+id/textNewCollectionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Collection"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- EditText for New Collection Name -->
+    <EditText
+        android:id="@+id/editNewCollectionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Collection Name"
+        android:inputType="text"/>
+
+    <!-- Button to Create New Collection -->
+    <Button
+        android:id="@+id/btnCreateNewCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Collection"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

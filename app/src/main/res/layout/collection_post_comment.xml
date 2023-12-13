@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    This xml is used to in poster_profile to show the comments
+        submitted by a user from that users profile-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Dish Name -->
+    <TextView
+        android:id="@+id/textDishName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dish Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <!-- Poster Name -->
+    <TextView
+        android:id="@+id/textPosterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Poster Name"
+        />
+
+    <!-- Star Rating -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4.5"
+        android:stepSize="0.5"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        />
+    <TextView
+        android:id="@+id/textCollectionComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Comment"
+        />
+</LinearLayout>

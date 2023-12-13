@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    This xml contains the posters profile, it is linked to by
+        the posters name in the post_full_view section-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Poster's Name -->
+        <TextView
+            android:id="@+id/textPosterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Poster's Name"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Poster's Collections (RecyclerView) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCollections"
+            android:layout_width="166dp"
+            android:layout_height="268dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPosterName"
+            tools:listitem="@layout/collection_layout" />
+
+        <!-- Label for Poster Comments -->
+
+        <!-- Posts with Poster's Comments (RecyclerView) -->
+
+        <TextView
+            android:id="@+id/labelPosterComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:padding="16dp"
+            android:text="Poster Comments"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerCollections" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPostsAndComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPosterComments"
+            tools:listitem="@layout/collection_post_comment" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="379dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

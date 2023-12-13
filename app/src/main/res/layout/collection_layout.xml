@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    This xml contains the list item for the recycler view
+        in collection_addition, just the collection name and acts
+        as a selection option when choosing what collection to add
+        a post to -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textCollectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Collection Name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</LinearLayout>

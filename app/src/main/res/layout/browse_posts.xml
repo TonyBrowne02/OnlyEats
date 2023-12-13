@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    This xml is used to be main browsing posts page,
+        linked to from the main page button, each item will
+        be a clickable item to access the post_full_view of that
+        specific post. Each item is a post_layout-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/browse_postsRecyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:listitem="@layout/post_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

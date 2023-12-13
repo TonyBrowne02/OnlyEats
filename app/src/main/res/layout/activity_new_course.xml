@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF5733"
+    tools:context=".NewCourseActivity">
+
+    <!-- Edit text for Name -->
+    <EditText
+        android:id="@+id/idEditName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Name" />
+
+    <!-- Edit text for Surname -->
+    <EditText
+        android:id="@+id/idEditSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Surname" />
+
+    <!-- Edit text for Telephone -->
+    <EditText
+        android:id="@+id/idEditTelephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Telephone" />
+
+    <!-- Edit text for Email -->
+    <EditText
+        android:id="@+id/idEditEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Email" />
+
+    <Button
+        android:id="@+id/idBtnSaveAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="Sign Up"
+        android:textAllCaps="false" />
+
+</LinearLayout>
