@@ -1,11 +1,12 @@
 package com.example.assignment;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "posts")
 public class Post {
-    //Post post = new Post(mealName, mealDescription, mealLocationRecipe, mealRating, posterName);
+    //Post post = new Post(mealName, mealDescription, mealLocationRecipe, mealRating, posterName, compressedImageData[]);
     @PrimaryKey(autoGenerate = true)
     private long postID;
     private String mealName;
@@ -14,13 +15,17 @@ public class Post {
     private float mealRating;
     private String posterName;
 
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
+    private byte[] compressedImageData;
+
     //constructor
-    public Post(String mealName, String mealDescription, String mealLocationRecipe, String posterName, float mealRating) {
+    public Post(String mealName, String mealDescription, String mealLocationRecipe, String posterName, float mealRating, byte[] compressedImageData) {
         this.mealName = mealName;
         this.mealDescription = mealDescription;
         this.mealLocationRecipe = mealLocationRecipe;
         this.posterName = posterName;
         this.mealRating = mealRating;
+        this.compressedImageData = compressedImageData;
 
     }
 
@@ -72,4 +77,13 @@ public class Post {
     public void setPosterName(String posterName) {
         this.posterName = posterName;
     }
+
+    public byte[] getCompressedImageData() {
+        return compressedImageData;
+    }
+
+    public void setCompressedImageData(byte[] compressedImageData) {
+        this.compressedImageData = compressedImageData;
+    }
+
 }//end Post

@@ -1,11 +1,11 @@
 package com.example.assignment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,12 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class PostFullView extends AppCompatActivity {
+public class PostFullViewActivity extends AppCompatActivity {
     private TextView textDishName;
     private TextView textPosterName;
     private TextView mealDescription;
@@ -29,6 +28,7 @@ public class PostFullView extends AppCompatActivity {
     private EditText editComment;
     private Button btnSubmitComment;
     private Button btnAddCollection;
+    private ImageView postImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,9 @@ public class PostFullView extends AppCompatActivity {
         recyclerComments = findViewById(R.id.recyclerComments);
         editComment = findViewById(R.id.editComment);
         btnSubmitComment = findViewById(R.id.btnSubmitComment);
-        btnAddCollection = findViewById(R.id.btnAddCollection);
+        //btnAddCollection = findViewById(R.id.btnAddCollection);
         recyclerComments.setLayoutManager(new LinearLayoutManager(this));
+        postImage = findViewById(R.id.imageFullPost);
 
         // Get post ID from Intent or any other source
         long postID = getIntent().getLongExtra("POSTID", -1);
@@ -109,6 +110,7 @@ public class PostFullView extends AppCompatActivity {
                 ratingBar.setIsIndicator(true);
                 mealLocationRecipe.setText(post.getMealLocationRecipe());
                 mealDescription.setText(post.getMealDescription());
+                postImage.setImageBitmap(ImageUtils.decompressBitmap(ImageUtils.decompressByteArray(post.getCompressedImageData())));
             } else {
                 Log.e("ERROR","NA Post requested on updateUI in PostFullView");
             }//end update post ui

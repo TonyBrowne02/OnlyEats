@@ -1,107 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--    This xml is a full view of a post, linked to from the
-        listitem in the browse_posts page -->
-<LinearLayout
+<!-- This xml is a full view of a post, linked to from the
+     listitem in the browse_posts page -->
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Dish Name -->
-    <TextView
-        android:id="@+id/textDishName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dish Name"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Poster Name -->
-    <TextView
-        android:id="@+id/textPosterName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Poster Name"
-        />
+        <!-- Dish Name -->
+        <TextView
+            android:id="@+id/textDishName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dish Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <!-- Star Rating -->
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:rating="4.5"
-        android:stepSize="0.5"
-        android:layout_marginTop="8dp"
-        />
-    <!-- Meal Description-->
-    <TextView
-        android:id="@+id/textMealDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Meal Description"
-        />
-    <!-- Meal Location/Recipe-->
-    <TextView
-        android:id="@+id/textMealLocationRecipe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Location/Recipe"
-        />
+        <!-- Poster Name -->
+        <TextView
+            android:id="@+id/textPosterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Poster Name" />
 
-    <!-- Divider Line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="?android:attr/dividerHorizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        />
+        <!-- Star Rating -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:rating="4.5"
+            android:stepSize="0.5" />
+        <!-- Meal Description-->
 
-    <!-- Comments Section -->
-    <TextView
-        android:id="@+id/textCommentsLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Comments"
-        android:textSize="18sp"
-        android:layout_marginTop="8dp"
-        />
+        <ImageView
+            android:id="@+id/imageFullPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <!-- Scrollable RecyclerView for Comments -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerComments"
-        android:layout_width="wrap_content"
-        android:layout_height="187dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        tools:listitem="@layout/comment" />
+        <TextView
+            android:id="@+id/textMealDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Meal Description" />
+        <!-- Meal Location/Recipe-->
+        <TextView
+            android:id="@+id/textMealLocationRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Location/Recipe" />
 
-    <!-- Comment Input -->
-    <EditText
-        android:id="@+id/editComment"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="Add your comment"
-        android:inputType="textMultiLine"/>
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/dividerHorizontal" />
 
-    <!-- Submit Button -->
-    <Button
-        android:id="@+id/btnSubmitComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit" />
+        <!-- Comments Section -->
+        <TextView
+            android:id="@+id/textCommentsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Comments"
+            android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btnAddCollection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add to collection" />
-</LinearLayout>
+        <!-- Scrollable RecyclerView for Comments -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComments"
+            android:layout_width="wrap_content"
+            android:layout_height="187dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            tools:listitem="@layout/comment" />
+
+        <!-- Comment Input -->
+        <EditText
+            android:id="@+id/editComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add your comment"
+            android:inputType="textMultiLine" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+        <!--
+        <Button
+            android:id="@+id/btnAddCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to collection" />
+            -->
+    </LinearLayout>
+</ScrollView>

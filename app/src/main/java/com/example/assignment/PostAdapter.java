@@ -44,6 +44,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostViewHolder>{
         holder.ratingBar.setRating(post.getMealRating());
         //Read only star rating on browse posts
         holder.ratingBar.setIsIndicator(true);
+        holder.imagePost.setImageBitmap(ImageUtils.decompressBitmap(ImageUtils.decompressByteArray(post.getCompressedImageData())));
         // Set a click listener for the item
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

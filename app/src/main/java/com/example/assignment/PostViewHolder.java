@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class PostViewHolder extends RecyclerView.ViewHolder {
     TextView textDishName, textPosterName;
     RatingBar ratingBar;
-    ImageView imageView;
+    ImageView imagePost;
 
     public PostViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -20,15 +20,6 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         textDishName = itemView.findViewById(R.id.textDishName);
         textPosterName = itemView.findViewById(R.id.textPosterName);
         ratingBar = itemView.findViewById(R.id.ratingBar);
-        imageView = itemView.findViewById(R.id.imageView);
-
-        // Set a click listener
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle item click, open post_full_view activity, etc.
-                //TODO
-            }
-        });
+        imagePost = itemView.findViewById(R.id.imagePost);
     }
 }

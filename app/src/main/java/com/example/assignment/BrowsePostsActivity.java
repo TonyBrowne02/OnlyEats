@@ -61,7 +61,7 @@ public class BrowsePostsActivity extends AppCompatActivity implements PostAdapte
     @Override
     public void onItemClick(Post post) {
         // Handle item click
-        Intent intent = new Intent(this, PostFullView.class);
+        Intent intent = new Intent(this, PostFullViewActivity.class);
         intent.putExtra("POSTID", post.getPostID());
         startActivity(intent);
     }
