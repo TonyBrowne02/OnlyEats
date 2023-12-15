@@ -26,7 +26,7 @@
         <activity android:name="SignInSignUpActivity" />
         <activity android:name=".BrowsePostsActivity" />
         <activity android:name=".CreatePostActivity" />
-        <activity android:name=".PosterProfileActivity" />
+        <activity android:name=".UserProfileActivity" />
         <activity android:name=".PostFullViewActivity"
             android:windowSoftInputMode="adjustResize"/><!-- Resize window when keyboard pops up-->
 

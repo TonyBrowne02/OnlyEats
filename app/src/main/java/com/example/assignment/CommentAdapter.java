@@ -46,12 +46,10 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
         }
 
         public void bind(Comment comment) {
-            //TODO textUserName.setText(comment.getUserName());
-
             textUserName.setText(comment.getUserEmail());
             textComment.setText(comment.getComment());
         }
-    }
+    }//end CommentViewHolder
 
-}
+}//end CommentAdapter
 

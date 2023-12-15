@@ -36,7 +36,7 @@ public class PostFullViewActivity extends AppCompatActivity {
         setContentView(R.layout.post_full_view);
 
         textDishName = findViewById(R.id.textDishName);
-        textPosterName = findViewById(R.id.textPosterName);
+        textPosterName = findViewById(R.id.textUserEmail);
         ratingBar = findViewById(R.id.ratingBar);
         mealDescription = findViewById(R.id.textMealDescription);
         mealLocationRecipe = findViewById(R.id.textMealLocationRecipe);
@@ -74,10 +74,10 @@ public class PostFullViewActivity extends AppCompatActivity {
 
 
         // Set click listener for the "Add to Collection" button
-        btnAddCollection.setOnClickListener(view -> {
+        //btnAddCollection.setOnClickListener(view -> {
             // TODO: Handle adding to collection
             // You can perform actions like adding the post to the user's collection, etc.
-        });
+        //});
     }//end onCreate
 
     private class GetFullPostTask implements Runnable {
@@ -105,7 +105,7 @@ public class PostFullViewActivity extends AppCompatActivity {
             if (post != null) {
                 // Set values to UI elements
                 textDishName.setText(post.getMealName());
-                textPosterName.setText(post.getPosterName());
+                textPosterName.setText(post.getPosterEmail());
                 ratingBar.setRating(post.getMealRating());
                 ratingBar.setIsIndicator(true);
                 mealLocationRecipe.setText(post.getMealLocationRecipe());

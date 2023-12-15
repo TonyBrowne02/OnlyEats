@@ -13,7 +13,7 @@
 
         <!-- Poster's Name -->
         <TextView
-            android:id="@+id/textPosterName"
+            android:id="@+id/UPtextUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
@@ -23,37 +23,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Poster's Collections (RecyclerView) -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerCollections"
-            android:layout_width="166dp"
-            android:layout_height="268dp"
-            android:layout_marginTop="8dp"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textPosterName"
-            tools:listitem="@layout/collection_layout" />
-
         <!-- Label for Poster Comments -->
 
-        <!-- Posts with Poster's Comments (RecyclerView) -->
 
         <TextView
             android:id="@+id/labelPosterComments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
             android:padding="16dp"
-            android:text="Poster Comments"
+            android:text="Your Posts"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerCollections" />
+            app:layout_constraintTop_toBottomOf="@+id/UPtextUserEmail" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerPostsAndComments"
+            android:id="@+id/UPrecyclerPosts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -62,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/labelPosterComments"
-            tools:listitem="@layout/collection_post_comment" />
+            tools:listitem="@layout/user_profile_post_comment" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"

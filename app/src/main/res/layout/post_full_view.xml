@@ -25,7 +25,7 @@
 
         <!-- Poster Name -->
         <TextView
-            android:id="@+id/textPosterName"
+            android:id="@+id/textUserEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -50,12 +50,25 @@
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TextView
+            android:id="@+id/textMealDescriptionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Meal Description" />
+
+        <TextView
             android:id="@+id/textMealDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Meal Description" />
         <!-- Meal Location/Recipe-->
+        <TextView
+            android:id="@+id/textMealLocationRecipeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="MealLocation/Recipe" />
         <TextView
             android:id="@+id/textMealLocationRecipe"
             android:layout_width="match_parent"

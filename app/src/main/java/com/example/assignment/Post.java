@@ -13,17 +13,17 @@ public class Post {
     private String mealDescription;
     private String mealLocationRecipe;
     private float mealRating;
-    private String posterName;
+    private String posterEmail;
 
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     private byte[] compressedImageData;
 
     //constructor
-    public Post(String mealName, String mealDescription, String mealLocationRecipe, String posterName, float mealRating, byte[] compressedImageData) {
+    public Post(String mealName, String mealDescription, String mealLocationRecipe, String posterEmail, float mealRating, byte[] compressedImageData) {
         this.mealName = mealName;
         this.mealDescription = mealDescription;
         this.mealLocationRecipe = mealLocationRecipe;
-        this.posterName = posterName;
+        this.posterEmail = posterEmail;
         this.mealRating = mealRating;
         this.compressedImageData = compressedImageData;
 
@@ -70,12 +70,12 @@ public class Post {
         this.mealRating = mealRating;
     }
 
-    public String getPosterName() {
-        return this.posterName;
+    public String getPosterEmail() {
+        return this.posterEmail;
     }
 
-    public void setPosterName(String posterName) {
-        this.posterName = posterName;
+    public void setPosterEmail(String posterEmail) {
+        this.posterEmail = posterEmail;
     }
 
     public byte[] getCompressedImageData() {

@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to PosterProfileActivity
-                Intent intent = new Intent(HomeActivity.this, PosterProfileActivity.class);
+                Intent intent = new Intent(HomeActivity.this, UserProfileActivity.class);
                 startActivity(intent);
             }
         });

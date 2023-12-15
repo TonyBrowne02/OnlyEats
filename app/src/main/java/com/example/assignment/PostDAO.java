@@ -21,4 +21,10 @@ public interface PostDAO {
     @Query("SELECT * FROM posts WHERE postID = :postId")
     Post getPostById(long postId);
 
-}
+    @Query("SELECT * FROM posts where postID in (:postIDs)")
+    List<Post> getPostsByIDs(List<Long> postIDs);
+
+    @Query("SELECT * FROM posts where posterEmail =:posterEmail")
+    List<Post> getPostsByUserEmail(String posterEmail);
+
+}//end PostDAO

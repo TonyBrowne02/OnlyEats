@@ -138,7 +138,7 @@ public class CreatePostActivity extends AppCompatActivity {
             String mealName = (String) params[0];
             String mealDescription = (String) params[1];
             String mealLocationRecipe = (String) params[2];
-            String posterName = (String) params[3];
+            String posterEmail = (String) params[3];
             float mealRating = Float.parseFloat((String) params[4]);
             byte[] compressedData= (byte[]) params[5];
 
@@ -148,7 +148,7 @@ public class CreatePostActivity extends AppCompatActivity {
                 PostDAO postDao = db.postDAO();
 
                 // Create a Post object with the provided data
-                Post post = new Post(mealName, mealDescription, mealLocationRecipe, posterName, mealRating,compressedData );
+                Post post = new Post(mealName, mealDescription, mealLocationRecipe, posterEmail, mealRating,compressedData );
 
                 // Insert the Post object into the database
                 postDao.insertPost(post);

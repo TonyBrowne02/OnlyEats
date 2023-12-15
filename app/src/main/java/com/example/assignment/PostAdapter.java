@@ -3,13 +3,16 @@ package com.example.assignment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class PostAdapter extends RecyclerView.Adapter<PostViewHolder>{
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder>{
     private List<Post> postList;
 
     public interface OnItemClickListener {
@@ -40,7 +43,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostViewHolder>{
 
         // Set data to the views in ViewHolder
         holder.textDishName.setText(post.getMealName());
-        holder.textPosterName.setText(post.getPosterName());
+        holder.textPosterName.setText(post.getPosterEmail());
         holder.ratingBar.setRating(post.getMealRating());
         //Read only star rating on browse posts
         holder.ratingBar.setIsIndicator(true);
@@ -56,9 +59,24 @@ public class PostAdapter extends RecyclerView.Adapter<PostViewHolder>{
         });
     }
 
-
     @Override
     public int getItemCount() {
         return postList.size();
     }
-}
+
+
+    public static class PostViewHolder extends RecyclerView.ViewHolder {
+        TextView textDishName, textPosterName;
+        RatingBar ratingBar;
+        ImageView imagePost;
+
+        public PostViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            textDishName = itemView.findViewById(R.id.textDishName);
+            textPosterName = itemView.findViewById(R.id.textUserEmail);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
+            imagePost = itemView.findViewById(R.id.imagePost);
+        }
+    }//end PostViewHolder
+}//end PostAdapter

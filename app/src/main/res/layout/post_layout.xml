@@ -22,7 +22,7 @@ android:padding="16dp">
 
 <!-- Poster Name -->
 <TextView
-    android:id="@+id/textPosterName"
+    android:id="@+id/textUserEmail"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"

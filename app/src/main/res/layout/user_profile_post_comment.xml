@@ -3,6 +3,7 @@
         submitted by a user from that users profile-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -20,7 +21,7 @@
 
     <!-- Poster Name -->
     <TextView
-        android:id="@+id/textPosterName"
+        android:id="@+id/PtextUserEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -47,11 +48,12 @@
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"
         />
-    <TextView
-        android:id="@+id/textCollectionComment"
+    <!-- RecyclerView for if a user has multiple comments on a single post-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerUserComments"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginTop="8dp"
-        android:text="Comment"
-        />
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/comment" />
 </LinearLayout>
